@@ -39,7 +39,10 @@ namespace ComplexAlgebra
 
         public override string ToString()
         {
-            return String.Format("{0}{2}{1}i", _re.ToString(), _im.ToString(), (_im < 0 ? "" : "+"));
+            return String.Format("{0}{1}{2}", _re == 0 ? "" : _re.ToString(),
+                _im <= 0 ? "" : "+",
+                _im == 0 ? "" : (_im == 1 ? "i" : (_im == -1 ? "-i" : _im.ToString() + "i"))
+            );
         }
 
         protected bool Equals(Complex other)
