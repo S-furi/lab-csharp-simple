@@ -35,7 +35,7 @@ namespace ComplexAlgebra
         public  Complex Complement() => new Complex(_re, -1 * _im);
         public Complex Minus(Complex b) => new Complex(_re - b._re, _im - b._im);
         public double Modulus => Math.Sqrt( Math.Pow(_re, 2) + Math.Pow(_im, 2) );
-        public double Phase => Math.Atan2(_im, _re);
+        public double Phase => Math.Atan2(Real, Imaginary);
 
         public override string ToString()
         {
